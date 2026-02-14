@@ -1,0 +1,194 @@
+/* ================================
+   RESET AND BASICS
+   ================================ */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* Makes width/height calculations easier and sets 0 margin coz some browser add default  */
+  }
+  
+  body {
+    background-color: #f4f1ea;  /* Aged paper color */
+    background-image: 
+    /* Left margin line (red like school notebooks) */
+    linear-gradient(to right, 
+      transparent 0, 
+      transparent 79px, /*gradient goes left to right from 0 to 79*/
+      rgba(0, 0, 0, 0.25) 79px,  /* Red margin line from 79 to 81 px  */
+      rgba(0, 0, 0, 0.25) 81px,
+      transparent 81px
+    ),
+    /* Horizontal ruled lines */
+    repeating-linear-gradient(
+      transparent,
+      transparent 29px,
+      rgba(0,0,0,0.5) 29px,
+      rgba(0,0,0,0.5) 30px
+    );
+    font-family: 'Roboto Mono', monospace;  
+    color: rgb(44, 44, 44);                 /* Dark gray text */
+  }
+  
+  /* Add equations/doodles as background using ::before */
+  body::before {
+    content: '';/*required for ::before to work thick of it as adding a layer*/
+    position: fixed; /* keeps image fixed when scrolled*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.4;  /* Very subtle */
+    z-index: 0;
+    background-image: url('assets/doodles.jpg');  /* Your custom doodles */
+    background-repeat: repeat;
+  }
+
+/* Make sure content sits above the doodles */
+.main-container,
+.topbar {
+  position: relative;
+  z-index: 1;
+}
+
+/* ================================
+   MAIN CONTAINER - WITH LEFT MARGIN
+   ================================ */
+   .main-container {
+    display: flex;
+    gap: 50px; /* gap between image and textt box*/
+    max-width: 1200px; 
+    margin: 50px auto;
+    margin-left: 100px;  /* Pushes content away from red margin line */
+    padding: 0 50px;
+    align-items: flex-start;
+  }
+  /* ================================
+     NAVIGATION BAR
+     ================================ */
+
+   .topbar {
+    position: sticky;           /* Stays at top when scrolling */
+    top: 20px;                  /* Lowered from top like before */
+    padding: 20px 0;            
+    margin: 20px auto 50px;     /* Centered with space around */
+    max-width: 1200px;          
+    
+    background-color: transparent;  /* No background */
+    
+    /* FLEXBOX: Items side by side */
+    display: flex;
+    align-items: center;
+    justify-content: center;    /* Center everything */
+    gap: 50px;                  /* Space between logo and links */
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(44, 44, 44);
+    padding-bottom: 5px;                    /* Space between text and line */
+    border-bottom: 2px solid rgb(44, 44, 44);  /* Line under logo */
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;                  /* Space between each link */
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+    font-size: 20px;
+    padding-bottom: 5px;                    /* Space between text and line */
+    border-bottom: 2px solid rgb(44, 44, 44);  /* Line under each link */
+    transition: opacity 0.3s;
+  }
+  
+  .nav-links li a:hover {
+    opacity: 0.6;               /* Fade slightly on hover */
+  }
+  /* ================================
+     MAIN CONTAINER - KEY FLEXBOX LAYOUT
+     ================================ */
+  .main-container {
+    display: flex;              /* FLEXBOX: Puts children side by side */
+    gap: 50px;                  /* Space between image slider and text box */
+    max-width: 1200px;          /* Maximum width on large screens */
+    margin: 50px auto;          /* Centers container, 50px top/bottom */
+    padding: 0 50px;            /* Padding on left/right edges */
+    align-items: flex-start;    /* Align items to top (not stretched) */
+  }
+  
+  /* ================================
+     IMAGE SLIDER (LEFT SIDE)
+     ================================ */
+ .slider-container {
+  width: 300px;
+  height: 325px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  border: 12px solid white;  /* Thick white border */
+  border-bottom: 50px solid white;  /* Extra thick bottom like polaroid */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+  
+  /* Wrapper that holds both images */
+  .image-wrapper {
+    display: flex;  
+    height: calc(100% - 35px);  /* Adjust for padding */        /* Images sit side by side in wrapper */
+    width: 200%;            /* Double width to hold 2 images */
+    height: 100%;
+    position: absolute;
+    left: 0;
+    transition: transform 1s ease-in-out;  /* Smooth slide animation */
+  }
+  
+  /* Individual images */
+  .slide-image {
+    width: 50%;             /* Each image is half of wrapper (50% of 200% = 100% of container) */
+    height: 100%;
+    object-fit: cover;      /* Crops image to fill space nicely */
+  }
+  
+  /* Hover effect - slides to second image */
+  .slider-container:hover .image-wrapper {
+    transform: translateX(-50%);  /* Moves wrapper left by 50% to show second image */
+  }
+  
+
+  /* ================================
+     TEXT CONTENT BOX (RIGHT SIDE)
+     ================================ */
+.shadow-box {
+      flex: none;                    /* Takes up all remaining space */
+      background-color: white;    /* White box on lined paper */
+      border: 1px solid #ddd;
+      border-bottom: 6px solid rgb(44, 44, 44);  /* Very thick, book spine style */     /* Light gray border */
+      padding: 40px;              /* Space inside the box */
+      border-radius: 8px;         /* Rounded corners */
+      box-shadow: 0 1px 10px rgba(0,0,0,0.12), 0 1px 20px rgba(0,0,0,0.24);  /* Original shadow */
+    }
+    
+    .shadow-box h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    
+    .shadow-box p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+/* New wrapper for stacked boxes */
+.right-column {
+  display: flex;
+  flex-direction: column;  /* Stack boxes vertically */
+  gap: 30px;  /* Space between boxes */
+  flex: 1;
+}
