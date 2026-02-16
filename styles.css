@@ -38,10 +38,11 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
-    opacity: 0.4;  /* Very subtle */
+    opacity: 0.5;  /* Very subtle */
     z-index: 0;
-    background-image: url('assets/doodles.jpg');  /* Your custom doodles */
-    background-repeat: repeat;
+    background-image: url('assets/doodles.jpeg');  /* Your custom doodles */
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
 /* Make sure content sits above the doodles */
@@ -63,52 +64,73 @@
     padding: 0 50px;
     align-items: flex-start;
   }
-  /* ================================
-     NAVIGATION BAR
-     ================================ */
-
+/* ================================
+   NAVIGATION BAR - BOXED STYLE
+   ================================ */
    .topbar {
-    position: sticky;           /* Stays at top when scrolling */
-    top: 20px;                  /* Lowered from top like before */
-    padding: 20px 0;            
-    margin: 20px auto 50px;     /* Centered with space around */
-    max-width: 1200px;          
+    position: sticky;
+    top: 20px;
+    padding: 20px 0;
+    margin: 20px auto 50px;
+    max-width: 1200px;
+    background-color: transparent;
     
-    background-color: transparent;  /* No background */
-    
-    /* FLEXBOX: Items side by side */
     display: flex;
     align-items: center;
-    justify-content: center;    /* Center everything */
-    gap: 50px;                  /* Space between logo and links */
+    justify-content: center;
+    gap: 20px;  /* Space between boxes */
     z-index: 1000;
   }
   
+  /* Logo box */
   .logo {
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 600;
     color: rgb(44, 44, 44);
-    padding-bottom: 5px;                    /* Space between text and line */
-    border-bottom: 2px solid rgb(44, 44, 44);  /* Line under logo */
+    
+    /* Box styling */
+    background-color: white;
+    padding: 12px 24px;
+    border: 1px solid #ddd;
+    border-bottom: 3px solid rgb(44, 44, 44);  /* Thick black bottom border */
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .logo:hover {
+    transform: translateY(-2px);  /* Slight lift on hover */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   }
   
   .nav-links {
     display: flex;
     list-style: none;
-    gap: 40px;                  /* Space between each link */
+    gap: 15px;  /* Space between link boxes */
   }
   
+  /* Each nav link box */
   .nav-links li a {
+    display: block;  /* Makes the whole box clickable */
     text-decoration: none;
     color: rgb(44, 44, 44);
-    font-size: 20px;
-    padding-bottom: 5px;                    /* Space between text and line */
-    border-bottom: 2px solid rgb(44, 44, 44);  /* Line under each link */
-    transition: opacity 0.3s;
+    font-size: 16px;
+    
+    /* Box styling */
+    background-color: white;
+    padding: 12px 24px;
+    border: 1px solid #ddd;
+    border-bottom: 3px solid rgb(44, 44, 44);  /* Thick black bottom border */
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    
+    transition: transform 0.2s, box-shadow 0.2s;
   }
   
   .nav-links li a:hover {
-    opacity: 0.6;               /* Fade slightly on hover */
+    transform: translateY(-2px);  /* Slight lift on hover */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
   }
   /* ================================
      MAIN CONTAINER - KEY FLEXBOX LAYOUT
