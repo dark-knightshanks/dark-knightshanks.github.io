@@ -16,6 +16,10 @@
 
   <!-- MAIN BOOK STRUCTURE -->
   <div class="book-container-layout">
+    <!-- Physical Silk Bookmark Ribbon hanging from book spine -->
+    <div class="silk-bookmark-ribbon" aria-hidden="true" title="Journal Bookmark Ribbon">
+      <div class="ribbon-tail"></div>
+    </div>
     
     <!-- CENTRAL CLEAN BOOK PAGE -->
     <div class="clean-book-page">
@@ -54,7 +58,10 @@
 
             <div class="leaf-body">
               <div class="chapter-sign">
-                <span class="chap-badge">CHAPTER I</span>
+                <div class="chap-badge-wrap">
+                  <span class="chap-badge">CHAPTER I</span>
+                  <span class="author-handle">@rishirajrajgor</span>
+                </div>
                 <h1 class="chap-title">The Silence of an Overthinking Mind</h1>
                 <p class="chap-subtitle">A brief prologue on breaking things, reading books, and figuring out how the world works.</p>
                 <div class="chapter-epigraph">
@@ -82,13 +89,14 @@
                 </div>
 
                 <div class="philosophy-note">
+                  <div class="washi-tape washi-corner-tr washi-tape-terracotta" aria-hidden="true"></div>
                   <span class="note-quote">"I keep asking questions until I can see the whole picture. Curiosity is asking why — and then asking why again."</span>
                 </div>
               </div>
             </div>
 
             <footer class="leaf-footer">
-              <span class="footer-hint">Reading time: 1 min</span>
+              <span class="footer-handle">@rishirajrajgor</span>
               <button class="turn-page-btn next-btn" onclick="flipToPage(1)">
                 Turn to Chapter II-1 (Builds) <span class="btn-arrow">&rarr;</span>
               </button>
@@ -118,6 +126,7 @@
                 
                 <!-- Project 1: QuadControl -->
                 <div class="project-entry">
+                  <div class="washi-tape washi-corner-tr washi-tape-amber" aria-hidden="true"></div>
                   <div class="p-head">
                     <div class="p-title-wrap">
                       <h3 class="p-name">QuadControl</h3>
@@ -135,6 +144,7 @@
 
                 <!-- Project 4: NovaPi -->
                 <div class="project-entry">
+                  <div class="washi-tape washi-corner-tr washi-tape-sage" aria-hidden="true"></div>
                   <div class="p-head">
                     <div class="p-title-wrap">
                       <h3 class="p-name">NovaPi</h3>
@@ -152,6 +162,7 @@
 
                 <!-- Project 4: NovaPi -->
                 <div class="project-entry">
+                  <div class="washi-tape washi-corner-tr washi-tape-sage" aria-hidden="true"></div>
                   <div class="p-head">
                     <div class="p-title-wrap">
                       <h3 class="p-name">blackbox</h3>
@@ -171,12 +182,15 @@
             </div>
 
             <footer class="leaf-footer">
-              <button class="turn-page-btn prev-btn" onclick="flipToPage(0)">
-                <span class="btn-arrow">&larr;</span> Chapter I
-              </button>
-              <button class="turn-page-btn next-btn" onclick="flipToPage(2)">
-                Turn to Chapter II-2 (Weekend Builds) <span class="btn-arrow">&rarr;</span>
-              </button>
+              <span class="footer-handle">@rishirajrajgor</span>
+              <div class="footer-btns-group">
+                <button class="turn-page-btn prev-btn" onclick="flipToPage(0)">
+                  <span class="btn-arrow">&larr;</span> Chapter I
+                </button>
+                <button class="turn-page-btn next-btn" onclick="flipToPage(2)">
+                  Turn to Chapter II-2 (Weekend Builds) <span class="btn-arrow">&rarr;</span>
+                </button>
+              </div>
             </footer>
 
           </div>
@@ -203,6 +217,7 @@
                 
                 <!-- Project 2: CNN from Scratch -->
                 <div class="project-entry">
+                  <div class="washi-tape washi-corner-tr washi-tape-terracotta" aria-hidden="true"></div>
                   <div class="p-head">
                     <div class="p-title-wrap">
                       <h3 class="p-name">CNN from Scratch</h3>
@@ -220,6 +235,7 @@
 
                 <!-- Project 3: tiny-vit -->
                 <div class="project-entry">
+                  <div class="washi-tape washi-corner-tr washi-tape-amber" aria-hidden="true"></div>
                   <div class="p-head">
                     <div class="p-title-wrap">
                       <h3 class="p-name">tiny-vit</h3>
@@ -237,6 +253,7 @@
 
                 <!-- Project 3: tiny-vit -->
                 <div class="project-entry">
+                  <div class="washi-tape washi-corner-tr washi-tape-amber" aria-hidden="true"></div>
                   <div class="p-head">
                     <div class="p-title-wrap">
                       <h3 class="p-name">basstap</h3>
@@ -254,6 +271,7 @@
 
                 <!-- Project 3: tiny-vit -->
                 <div class="project-entry">
+                  <div class="washi-tape washi-corner-tr washi-tape-amber" aria-hidden="true"></div>
                   <div class="p-head">
                     <div class="p-title-wrap">
                       <h3 class="p-name">pixelperfect</h3>
@@ -275,12 +293,15 @@
             </div>
 
             <footer class="leaf-footer">
-              <button class="turn-page-btn prev-btn" onclick="flipToPage(1)">
-                <span class="btn-arrow">&larr;</span> Chapter II-1 (Builds)
-              </button>
-              <button class="turn-page-btn next-btn" onclick="flipToPage(3)">
-                Turn to Chapter III (Say Hi) <span class="btn-arrow">&rarr;</span>
-              </button>
+              <span class="footer-handle">@rishirajrajgor</span>
+              <div class="footer-btns-group">
+                <button class="turn-page-btn prev-btn" onclick="flipToPage(1)">
+                  <span class="btn-arrow">&larr;</span> Chapter II-1 (Builds)
+                </button>
+                <button class="turn-page-btn next-btn" onclick="flipToPage(3)">
+                  Turn to Chapter III (On Desk) <span class="btn-arrow">&rarr;</span>
+                </button>
+              </div>
             </footer>
 
           </div>
@@ -289,12 +310,103 @@
         <!-- ============================================
              PAGE 3: EPILOGUE & CONTACT
              ============================================ -->
+        
+        <!-- ============================================
+             PAGE 4: CHAPTER III - ON MY DESK & READING LOG
+             ============================================ -->
         <section class="leaf-page" id="page-3">
           <div class="leaf-inner">
 
             <div class="leaf-body">
               <div class="chapter-sign">
                 <span class="chap-badge">CHAPTER III</span>
+                <h2 class="chap-title">On My Desk &amp; Reading Logs</h2>
+                <p class="chap-subtitle">Books, papers, and philosophies that rewired how I think.</p>
+                <div class="chapter-epigraph">
+                  <p class="epigraph-quote">"I have always imagined that Paradise will be a kind of library."</p>
+                  <span class="epigraph-source">— Jorge Luis Borges</span>
+                </div>
+              </div>
+
+              <div class="bookshelf-full-grid">
+                
+                <div class="shelf-card">
+                  <div class="s-meta">
+                    <span class="s-badge reading">Currently Reading</span>
+                    <span class="s-genre">Classic Literature</span>
+                  </div>
+                  <div class="washi-tape washi-corner-tr washi-tape-terracotta" aria-hidden="true"></div>
+                  <h3 class="s-title">Crime and Punishment</h3>
+                  <span class="s-author">Fyodor Dostoevsky</span>
+                  <p class="s-notes">
+                    "Guilt, psychological unraveling, and the dangerous rationalization of an intellectual ego."
+                  </p>
+                </div>
+
+                <div class="shelf-card">
+                  <div class="s-meta">
+                    <span class="s-badge reading">Currently Reading</span>
+                    <span class="s-genre">Cognitive Psychology</span>
+                  </div>
+                  <h3 class="s-title">Thinking, Fast and Slow</h3>
+                  <span class="s-author">Daniel Kahneman</span>
+                  <p class="s-notes">
+                    "System 1 intuition vs. System 2 deliberation — how cognitive biases and heuristics dictate our choices."
+                  </p>
+                </div>
+
+                <div class="shelf-card">
+                  <div class="s-meta">
+                    <span class="s-badge reading">Currently Reading</span>
+                    <span class="s-genre">Dark Epic</span>
+                  </div>
+                  <div class="washi-tape washi-corner-tr washi-tape-sage" aria-hidden="true"></div>
+                  <h3 class="s-title">The Stand</h3>
+                  <span class="s-author">Stephen King</span>
+                  <p class="s-notes">
+                    "A sweeping post-apocalyptic saga on human nature, survival, and the clash between light and shadow."
+                  </p>
+                </div>
+
+                <div class="shelf-card">
+                  <div class="s-meta">
+                    <span class="s-badge reading">Currently Reading</span>
+                    <span class="s-genre">Sci-Fi / Fantasy</span>
+                  </div>
+                  <h3 class="s-title">This Inevitable Ruin</h3>
+                  <span class="s-author">Matt Dinniman</span>
+                  <p class="s-notes">
+                    "Dungeon Crawler Carl Book 7 — chaotic, unhinged survival, high-stakes tactics, and emotional depth."
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
+            <footer class="leaf-footer">
+              <span class="footer-handle">@rishirajrajgor</span>
+              <div class="footer-btns-group">
+                <button class="turn-page-btn prev-btn" onclick="flipToPage(2)">
+                  <span class="btn-arrow">&larr;</span> Chapter II-2 (Weekend)
+                </button>
+                <button class="turn-page-btn next-btn" onclick="flipToPage(4)">
+                  Turn to Chapter IV (Say Hi) <span class="btn-arrow">&rarr;</span>
+                </button>
+              </div>
+            </footer>
+
+          </div>
+        </section>
+
+        <!-- ============================================
+             PAGE 5: EPILOGUE & CONTACT
+             ============================================ -->
+        <section class="leaf-page" id="page-4">
+          <div class="leaf-inner">
+
+            <div class="leaf-body">
+              <div class="chapter-sign">
+                <span class="chap-badge">CHAPTER IV</span>
                 <h2 class="chap-title">Say Hello (I Don't Bite)</h2>
                 <p class="chap-subtitle">Where to find me when I'm not getting lost in books.</p>
                 <div class="chapter-epigraph">
@@ -312,6 +424,7 @@
               </div>
 
               <div class="contact-card-milky">
+                <div class="washi-tape washi-corner-tr washi-tape-amber" aria-hidden="true"></div>
                 <div class="contact-row">
                   <span class="c-key">Mail</span>
                   <a href="mailto:rishirajrajgor@gmail.com" class="c-val">rishirajrajgor@gmail.com</a>
@@ -328,12 +441,15 @@
             </div>
 
             <footer class="leaf-footer">
-              <button class="turn-page-btn prev-btn" onclick="flipToPage(2)">
-                <span class="btn-arrow">&larr;</span> Chapter II-2 (Weekend Builds)
-              </button>
-              <button class="turn-page-btn next-btn" onclick="flipToPage(0)">
-                Back to Chapter I <span class="btn-arrow">&circlearrowright;</span>
-              </button>
+              <span class="footer-handle">@rishirajrajgor</span>
+              <div class="footer-btns-group">
+                <button class="turn-page-btn prev-btn" onclick="flipToPage(3)">
+                  <span class="btn-arrow">&larr;</span> Chapter III (On Desk)
+                </button>
+                <button class="turn-page-btn next-btn" onclick="flipToPage(0)">
+                  Back to Chapter I <span class="btn-arrow">&circlearrowright;</span>
+                </button>
+              </div>
             </footer>
 
           </div>
@@ -358,6 +474,10 @@
       </button>
       <button class="side-tab" onclick="flipToPage(3)">
         <span class="side-tab-index">03</span>
+        <span class="side-tab-text">On Desk</span>
+      </button>
+      <button class="side-tab" onclick="flipToPage(4)">
+        <span class="side-tab-index">04</span>
         <span class="side-tab-text">Say Hi</span>
       </button>
     </nav>
