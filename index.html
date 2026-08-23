@@ -76,7 +76,7 @@
 
               <div class="prose-layout">
                 <p class="lead-prose">
-                  <span class="drop-cap">I</span>'m a 19-year-old engineering student in Mumbai, exploring ideas at the intersection of <em>robotics, embedded systems, control theory, and machine intelligence</em>.
+                  <span class="drop-cap">I</span>'m a 20-year-old engineering student in Mumbai, exploring ideas at the intersection of <em>robotics, embedded systems, control theory, and machine intelligence</em>.
                   Also I like math the way I like everything else: <em>solve it, question it, visualize it,</em> and keep going until it makes sense.
                 </p>
 
@@ -164,7 +164,7 @@
                   </div>
                 </div>
 
-                <!-- Project 4: NovaPi -->
+                <!-- Project 3: blackbox -->
                 <div class="project-entry">
                   <div class="washi-tape washi-corner-tr washi-tape-sage" aria-hidden="true"></div>
                   <div class="p-head">
@@ -345,6 +345,11 @@
                   <p class="s-notes">
                     "Guilt, psychological unraveling, and the dangerous rationalization of an intellectual ego."
                   </p>
+                  <!-- Floating Hover Cover Peek -->
+                  <div class="book-cover-peek" aria-hidden="true">
+                    <img src="assets/covers/crime_and_punishment.png" alt="Crime and Punishment Cover" class="peek-cover-img" loading="lazy" />
+                    <span class="peek-caption">Crime &amp; Punishment</span>
+                  </div>
                 </div>
 
                 <div class="shelf-card">
@@ -357,6 +362,11 @@
                   <p class="s-notes">
                     "System 1 intuition vs. System 2 deliberation — how cognitive biases and heuristics dictate our choices."
                   </p>
+                  <!-- Floating Hover Cover Peek -->
+                  <div class="book-cover-peek" aria-hidden="true">
+                    <img src="assets/covers/thinkking_fast_and_slow.png" alt="Thinking Fast and Slow Cover" class="peek-cover-img" loading="lazy" />
+                    <span class="peek-caption">Thinking, Fast and Slow</span>
+                  </div>
                 </div>
 
                 <div class="shelf-card">
@@ -370,6 +380,11 @@
                   <p class="s-notes">
                     "A sweeping post-apocalyptic saga on human nature, survival, and the clash between light and shadow."
                   </p>
+                  <!-- Floating Hover Cover Peek -->
+                  <div class="book-cover-peek" aria-hidden="true">
+                    <img src="assets/covers/the_stand.png" alt="The Stand Cover" class="peek-cover-img" loading="lazy" />
+                    <span class="peek-caption">The Stand</span>
+                  </div>
                 </div>
 
                 <div class="shelf-card">
@@ -382,6 +397,11 @@
                   <p class="s-notes">
                     "Dungeon Crawler Carl Book 7 — chaotic, unhinged survival, high-stakes tactics, and emotional depth."
                   </p>
+                  <!-- Floating Hover Cover Peek -->
+                  <div class="book-cover-peek" aria-hidden="true">
+                    <img src="assets/covers/thisinevitableruin.png" alt="This Inevitable Ruin Cover" class="peek-cover-img" loading="lazy" />
+                    <span class="peek-caption">This Inevitable Ruin</span>
+                  </div>
                 </div>
 
               </div>
@@ -517,6 +537,31 @@
       }
     }
 
+
+    // Click-to-Copy Email with Toast
+    function copyEmail(e, email) {
+      if (navigator.clipboard) {
+        e.preventDefault();
+        navigator.clipboard.writeText(email).then(() => {
+          showToast(`Copied ${email} to clipboard!`);
+        }).catch(() => {
+          window.location.href = `mailto:${email}`;
+        });
+      }
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toastNotice');
+      const msgEl = document.getElementById('toastMsg');
+      if (!toast) return;
+      if (msgEl) msgEl.textContent = msg;
+      toast.classList.add('show');
+      clearTimeout(window.toastTimer);
+      window.toastTimer = setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2600);
+    }
+
     // Support keyboard arrow navigation for page turns
     window.addEventListener('keydown', (e) => {
       const pages = document.querySelectorAll('.leaf-page');
@@ -533,5 +578,9 @@
     });
   </script>
 
+  <!-- Toast Notification Pill for Copy Feedback -->
+  <div class="toast-notification" id="toastNotice" role="status" aria-live="polite">
+    <span class="toast-check">✓</span> <span id="toastMsg">Copied to clipboard!</span>
+  </div>
 </body>
 </html>
