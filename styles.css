@@ -1078,3 +1078,143 @@ body.clean-desk {
   color: #22c55e;
   font-weight: 700;
 }
+
+/* Chapter II-2: Sub-page Carousel / Pagination */
+.deck-pagination-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding: 6px 10px;
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px dashed var(--border-subtle);
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.deck-page-indicator {
+  color: var(--ink-secondary);
+  letter-spacing: 0.5px;
+}
+
+.deck-page-indicator strong {
+  color: var(--ink-primary);
+}
+
+.deck-nav-btns {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.deck-nav-btn {
+  background: var(--page-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--ink-secondary);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.deck-nav-btn:hover:not(:disabled) {
+  background: #fdfaf3;
+  color: var(--ink-primary);
+  border-color: var(--ink-accent);
+}
+
+.deck-nav-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  border-color: var(--border-subtle);
+}
+
+.deck-slide {
+  display: none;
+}
+
+.deck-slide.active {
+  display: contents;
+}
+
+/* Chapter III Bookshelf Tabs in Header */
+.chap-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  gap: 12px;
+}
+
+.shelf-tab-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(0, 0, 0, 0.03);
+  padding: 2px 4px;
+  border-radius: 6px;
+  border: 1px solid var(--border-subtle);
+}
+
+.shelf-tab-btn {
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  padding: 3px 9px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  color: var(--ink-secondary);
+  cursor: pointer;
+  transition: all 0.16s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.shelf-tab-btn:hover {
+  color: var(--ink-primary);
+}
+
+.shelf-tab-btn.active {
+  background: var(--page-surface);
+  color: var(--ink-accent);
+  font-weight: 700;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.bookshelf-stage {
+  position: relative;
+  min-height: 290px;
+}
+
+.shelf-view-pane {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.22s ease-in-out;
+}
+
+.shelf-view-pane.active {
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.shelf-view-pane .shelf-card {
+  min-height: 132px;
+}
+
+
+
