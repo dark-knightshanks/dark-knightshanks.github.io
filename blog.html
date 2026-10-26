@@ -1,1 +1,130 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing Archive — Rishiraj</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    html, body {
+      overflow-y: auto !important;
+      height: auto !important;
+      min-height: 100vh;
+    }
+    body.clean-desk {
+      padding: 40px 20px;
+      align-items: center;
+      justify-content: center;
+    }
+    .book-container-layout {
+      height: auto !important;
+      max-height: none !important;
+      margin: 20px auto;
+    }
+    .leaf-page {
+      position: relative !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+      pointer-events: auto !important;
+    }
+    .draft-note-box {
+      margin: 32px 0 24px;
+      padding: 30px 32px;
+      background: var(--bg-desk);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      position: relative;
+    }
+    .draft-note-box p {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--ink-secondary);
+      margin-bottom: 14px;
+    }
+    .draft-note-box p:last-child {
+      margin-bottom: 0;
+    }
+    .draft-tagline {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--ink-accent);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+      display: block;
+    } 
+  </style>
+</head>
+<body class="clean-desk">
+
+  <div class="book-container-layout">
+    
+    <div class="clean-book-page">
+      <div class="pages-deck">
+        <section class="leaf-page active">
+          <div class="leaf-inner">
+            
+            <header class="leaf-header">
+              <span class="folio-meta">rishiraj rajgor · personal notebook</span>
+              <span class="folio-num">§ 05 // WRITING</span>
+            </header>
+
+            <div class="leaf-body" style="overflow: visible; padding: 10px 0;">
+              
+              <div class="chapter-sign">
+                <span class="chap-badge">CHAPTER V</span>
+                <h1 class="chap-title" style="margin-top: 6px;">Nothing published yet.</h1>
+                <p class="chap-subtitle">A placeholder for thoughts in progress.</p>
+              </div>
+
+              <div class="draft-note-box">
+                <div class="washi-tape washi-corner-tr washi-tape-terracotta" aria-hidden="true"></div>
+                <span class="draft-tagline">Desk Log // In Progress</span>
+                <p>
+                  Right now, most of my writing lives in half-filled notebooks, commit messages, and scratch files across my laptop.
+                </p>
+                <p>
+                  Between getting lost in Russian literature, working on side projects, and trying to figure out open source, I haven't had the time to sit down and finish any long-form pieces.
+                </p>
+                <p>
+                  Once I write something I'm actually happy with, I'll post it here.
+                </p>
+              </div>
+
+            </div>
+
+            <footer class="leaf-footer" style="margin-top: 24px;">
+              <span class="footer-handle">@rishirajrajgor</span>
+              <a href="index.html" class="turn-page-btn prev-btn" style="text-decoration: none;">
+                <span class="btn-arrow">&larr;</span> Back to Notebook
+              </a>
+            </footer>
+
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- SIDE BOOKMARKS -->
+    <nav class="side-bookmarks-bar" aria-label="Book Navigation">
+      <a href="index.html" class="side-tab" style="text-decoration: none;">
+        <span class="side-tab-index">&larr;</span>
+        <span class="side-tab-text">Notebook</span>
+      </a>
+      <button class="side-tab active">
+        <span class="side-tab-index">05</span>
+        <span class="side-tab-text">Essays</span>
+      </button>
+    </nav>
+
+  </div>
+
+</body>
+</html>

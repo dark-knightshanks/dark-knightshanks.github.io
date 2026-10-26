@@ -608,6 +608,10 @@
         <span class="side-tab-index">04</span>
         <span class="side-tab-text">Say Hi</span>
       </button>
+      <a href="blog.html" class="side-tab" style="text-decoration: none;">
+        <span class="side-tab-index">05</span>
+        <span class="side-tab-text">Essays ↗</span>
+      </a>
     </nav>
 
   </div>
@@ -626,10 +630,12 @@
       });
 
       tabs.forEach((t, i) => {
-        if (i === index) {
-          t.classList.add('active');
-        } else {
-          t.classList.remove('active');
+        if (t.tagName.toLowerCase() === 'button') {
+          if (i === index) {
+            t.classList.add('active');
+          } else {
+            t.classList.remove('active');
+          }
         }
       });
 
